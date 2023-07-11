@@ -1,0 +1,5 @@
+<h1>Edit a blog Post!</h1>
+<%= render(partial: "form", locals: {blog_post: @blog_post}) %>
+
+<%= button_to("Delete", @blog_post, method: :delete, data: {turbo_confirm: "Are you sure?"}, class: "bg-gray-100 px-4 py-2 rounded my-8 hover:bg-gray-200") %>
+<%= link_to("Back", root_path, class:"no-underline hover:underline") %>

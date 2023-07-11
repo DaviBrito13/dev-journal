@@ -1,0 +1,7 @@
+<% if user_signed_in?() %>
+  <%= link_to("Edit", edit_blog_post_path(@blog_post), class:"no-underline hover:underline") %>
+<% end %>
+<hr>
+<h1><%= @blog_post.title %></h1>
+<p><%= @blog_post.body %></p>
+<%= link_to("Back", root_path, class:"no-underline hover:underline") %>

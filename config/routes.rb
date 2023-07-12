@@ -1,5 +1,5 @@
 Rails.application.routes.draw do
-  devise_for :users
+  devise_for :users, controllers: { sessions: 'users/sessions' }
   # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
   #    URI                    controller | function shortcut
   #Todas as rotas a seguir serão resumidas em uma única rota
@@ -13,7 +13,6 @@ Rails.application.routes.draw do
   resources(:blog_posts)
 
   
-
   # Defines the root path route ("/")
   root "blog_posts#index"
 end
